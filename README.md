@@ -73,9 +73,11 @@ rmdir test3
 ```
 
 -    Create simple script which prints current date. Try to execute it.
+
 ```console
 #!/bin/bash
-echo date +%D
+echo (date '+%D')
+sh Script1.sh
 ```
 
 ## Log checking
@@ -95,25 +97,25 @@ tail -3 test.txt
 -  Hom many uniq IP addresses accessed the website ? 
 
 ```console
-
+awk '{ print %1}' test.txt | sort | uniq | wc -l
 ```
 
 -  IP address with most requests.
 
 ```console
-
+awk '{ print %1}' test.txt | sort | uniq -c | uniq -nr | head -n 1 
 ```
 
 -  Top 3 IP addresses by amount of POST requests.
 
 ```console
-
+grep 'POST' text.txt | awk '( print %1)' | sort | uniq -c | uniq -nr | head -n 3 
 ```
 
 -  Which IP addresses received 403 error ? 
 
 ```console
-
+grep '403' text.txt | awk '( print %1)'
 ```
 
 - Task with * . Write script to show which pages Google checked from the website 
