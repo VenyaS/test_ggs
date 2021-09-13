@@ -27,7 +27,7 @@ rm test1.txt /test2/
 
 -    Rename test2 folder into directory_without_file
 
-```consle
+```console
 mv /test2 /directory_witout_file
 ```
 
@@ -37,26 +37,40 @@ mv /test2 /directory_witout_file
 echo test1 >> /test1/test1.txt 
 ```
 
-
 -    print the text from the test1/test1.txt file.
 
 ```console
-cat test1/test1.txt
+cat > test1/test1.txt
 ```
-
 
 -    Insert 'test2' into the end of test1/test1.txt file.
 
+```console
+echo test2 >> /test1/test1.txt
+```
 -    print the text from the test1/test1.txt file.
 
+```console
+cat > /test1/test1.txt
+```
 - check the size of test1 directory
 
+```console
+du /test1 -h
+```
 ## Permissions
 
 -   Create test directory and block access for all to it.
 
+```console
+mkdir /test3
+chmod 000 /test3
+```
 -   Try to remove that directory.
 
+```console
+rmdir /test3
+```
 
 -    Create simple script which prints current date. Try to execute it.
 
