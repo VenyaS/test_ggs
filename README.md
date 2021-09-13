@@ -63,40 +63,68 @@ du /test1 -h
 -   Create test directory and block access for all to it.
 
 ```console
-mkdir /test3
-chmod 000 /test3
+mkdir test3
+chmod 000 test3
 ```
 -   Try to remove that directory.
 
 ```console
-rmdir /test3
+rmdir test3
 ```
 
 -    Create simple script which prints current date. Try to execute it.
-
+```console
+#!/bin/bash
+echo date +%D
+```
 
 ## Log checking
 
 -  Count lines in the file test.txt.
 
+```console
+wc -l test.txt
+```
 
 - Show last 3 lines from the test.txt file. 
 
+```console
+tail -3 test.txt
+```
 
 -  Hom many uniq IP addresses accessed the website ? 
 
+```console
+
+```
 
 -  IP address with most requests.
 
+```console
+
+```
 
 -  Top 3 IP addresses by amount of POST requests.
 
+```console
+
+```
 
 -  Which IP addresses received 403 error ? 
 
+```console
+
+```
 
 - Task with * . Write script to show which pages Google checked from the website 
 
+``` console
+
+```
 ## Replace
 
 Replace IP address with most requests on 127.0.0.1 in test.txt file 
+
+```console
+
+```
