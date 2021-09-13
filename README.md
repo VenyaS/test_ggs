@@ -21,11 +21,29 @@ cp test1 test2
 
 -    Delete file test1.txt inside test2 directory.
 
+```console
+rm test1.txt /test2/
+```
+
 -    Rename test2 folder into directory_without_file
+
+```consle
+mv /test2 /directory_witout_file
+```
 
 -    Insert 'test1' text into test1/test1.txt file.
 
+```console
+echo test1 >> /test1/test1.txt 
+```
+
+
 -    print the text from the test1/test1.txt file.
+
+```console
+cat test1/test1.txt
+```
+
 
 -    Insert 'test2' into the end of test1/test1.txt file.
 
