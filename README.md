@@ -22,7 +22,7 @@ cp test1 test2
 -    Delete file test1.txt inside test2 directory.
 
 ```console
-rm test1.txt /test2/
+~/test2$ rm test1.txt
 ```
 
 -    Rename test2 folder into directory_without_file
