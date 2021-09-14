@@ -110,7 +110,7 @@ awk '{ print $1}' test.txt | sort | uniq -c | sort -nr | head -n 1
 -  Top 3 IP addresses by amount of POST requests.
 
 ```console
-grep 'POST' text.txt | awk '( print %1)' | sort | uniq -c | uniq -nr | head -n 3 
+grep POST text.txt | awk '( print %1)' | sort | uniq -c | uniq -nr | head -n 3 
 ```
 
 -  Which IP addresses received 403 error ? 
