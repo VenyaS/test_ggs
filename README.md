@@ -77,6 +77,7 @@ rmdir test3
 ```console
 #!/bin/bash
 echo (date '+%D')
+
 sh Script1.sh
 ```
 
@@ -97,13 +98,13 @@ tail -3 test.txt
 -  Hom many uniq IP addresses accessed the website ? 
 
 ```console
-awk '{ print %1}' test.txt | sort | uniq | wc -l
+awk '{ print $1}' test.txt | sort | uniq | wc -l
 ```
 
 -  IP address with most requests.
 
 ```console
-awk '{ print %1}' test.txt | sort | uniq -c | sort -nr | head -n 1 
+awk '{ print $1}' test.txt | sort | uniq -c | sort -nr | head -n 1 
 ```
 
 -  Top 3 IP addresses by amount of POST requests.
@@ -115,7 +116,7 @@ grep 'POST' text.txt | awk '( print %1)' | sort | uniq -c | uniq -nr | head -n 3
 -  Which IP addresses received 403 error ? 
 
 ```console
-grep '403' text.txt | awk '( print %1)'
+grep '403' text.txt | awk '( print $1)'
 ```
 
 - Task with * . Write script to show which pages Google checked from the website 
