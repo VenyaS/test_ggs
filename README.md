@@ -103,7 +103,7 @@ awk '{ print %1}' test.txt | sort | uniq | wc -l
 -  IP address with most requests.
 
 ```console
-awk '{ print %1}' test.txt | sort | uniq -c | uniq -nr | head -n 1 
+awk '{ print %1}' test.txt | sort | uniq -c | sort -nr | head -n 1 
 ```
 
 -  Top 3 IP addresses by amount of POST requests.
@@ -128,5 +128,5 @@ grep '403' text.txt | awk '( print %1)'
 Replace IP address with most requests on 127.0.0.1 in test.txt file 
 
 ```console
-
+sed -i 's/114.119.140.234/127.0.0.1/g' test.txt
 ```
