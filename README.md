@@ -122,7 +122,10 @@ grep '403' text.txt | awk '( print $1)'
 - Task with * . Write script to show which pages Google checked from the website 
 
 ``` console
+#!/bin/bash
+grep google test.txt | awk '{ print $7}'
 
+sh GoogleSc.sh
 ```
 ## Replace
 
